@@ -21,10 +21,10 @@ module.exports = {
 			return res.json({'status':'GET not allowed'});
 		sails.log.debug('We have entered the uploading process ');
 	  req.file('avatar').upload({
-	  dirname: '../../assets/images/avatars/'+req.session.User.id
+	  	dirname: '../../assets/images/avatars/'
 		},function (err, uploadedFiles) {
+			//console.log(uploadedFiles);
 		  if (err) return res.negotiate(err);
-			console.log(uploadedFiles);
 			var obj={
 				name: path.posix.basename(uploadedFiles[0].fd),
 				owner: req.session.User.id,
@@ -40,10 +40,9 @@ module.exports = {
 					User.update({id:image.owner},{user_image:image.name},function editImage(err, user){
 							if(err){
 							}
-							//User.publishUpdate()
+							User.publishUpdate(req.session.User.id, user)
 					})
 				}
-
 			});
 		  //return res.json({
 		    //message: uploadedFiles.length + ' file(s) uploaded successfully!'

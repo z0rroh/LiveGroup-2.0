@@ -1302,11 +1302,9 @@ header {
     width: 50px;
     color: #fafafa;
     padding: 6px;
-    border-radius: 3px;
-    transition: all 1s; }
+    border-radius: 3px; }
   .Logout a:hover {
-    background: #2c2c2c;
-    color: #8bc34a; }
+    border: 1px solid #fff; }
 
 .Logo {
   height: 60px;
@@ -1502,8 +1500,7 @@ header {
     transform: rotate(0deg); } }
 
 .AnuncioNuevo {
-  padding: 1em;
-  margin-bottom: .5em; }
+  padding: 1em; }
 
 .AnuncioNuevo-Image {
   padding: 0;
@@ -1550,7 +1547,10 @@ header {
 
 .Main {
   background: #f6f7f8;
-  margin-top: 10px; }
+  margin-top: 40px; }
+  .Main section {
+    margin: 0px;
+    padding: 0px; }
 
 .no-anuncios {
   height: 400px;
@@ -1559,20 +1559,20 @@ header {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
-  top: 280px; }
+  position: relative;
+  top: 10px; }
   .no-anuncios i {
     position: relative;
-    top: 80px;
+    top: 100px;
     font-size: 100px;
     color: rgba(151, 151, 151, 0.5); }
   .no-anuncios h3 {
     position: relative;
-    top: 100px;
+    top: 110px;
     color: rgba(151, 151, 151, 0.5) !important; }
 
 .comments-container {
-  margin: 10px auto 15px;
+  margin: 20px auto 15px;
   width: 768px; }
   .comments-container h1 {
     font-size: 36px;
@@ -2095,8 +2095,7 @@ div.material-table {
 
 .Perfil-Container {
   padding: 0px;
-  margin-top: 20px;
-  margin-bottom: 10px; }
+  margin: 40px 0; }
   .Perfil-Container .User-Edit {
     background-color: #24292e;
     height: 130px;
@@ -2107,17 +2106,16 @@ div.material-table {
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 2px 0px rgba(0, 0, 0, 0.12); }
   .Perfil-Container .upload-icon {
     position: absolute;
-    display: inline;
     top: 147px;
+    background-color: transparent;
+    border: none;
     height: auto;
-    width: auto; }
-    .Perfil-Container .upload-icon a {
-      display: inherit;
-      height: 27px;
-      width: 27px;
-      color: white; }
-      .Perfil-Container .upload-icon a i {
-        font-size: 27px; }
+    width: auto;
+    color: #fff;
+    left: -5px;
+    top: 10px; }
+    .Perfil-Container .upload-icon i {
+      font-size: 27px; }
   .Perfil-Container .User-Edit-img {
     margin-left: auto;
     margin-right: auto;
@@ -2125,6 +2123,10 @@ div.material-table {
     width: 120px;
     height: 120px; }
     .Perfil-Container .User-Edit-img img {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%; }
+    .Perfil-Container .User-Edit-img .user-img-skeleton {
       height: 120px;
       width: 120px;
       border-radius: 50%; }
@@ -2141,11 +2143,11 @@ div.material-table {
       margin-right: auto; }
   .Perfil-Container .Tittle-Element {
     border-bottom: 1px solid #efefef;
-    margin: 10px 10px;
     margin-left: auto;
     margin-right: auto; }
     .Perfil-Container .Tittle-Element h4 {
-      font-size: 18px; }
+      font-size: 18px;
+      margin: 10px 0 10px; }
   .Perfil-Container .User-Info {
     display: inherit;
     padding: 0px;
@@ -2188,6 +2190,151 @@ div.material-table {
         float: left;
         font-size: 10px; }
 
+.Popover-Avatar .submit-name {
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 .Popover-Avatar .submit-file {
   width: 100%;
   margin-top: 5px; }
+
+.comments-list-skeleton {
+  position: relative; }
+  .comments-list-skeleton li {
+    margin-bottom: 30px;
+    display: block;
+    position: relative; }
+  .comments-list-skeleton li:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0; }
+  .comments-list-skeleton .comment-avatar-skeleton {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    z-index: 99;
+    float: left;
+    border: 3px solid #000;
+    border-radius: 4px;
+    overflow: hidden; }
+  .comments-list-skeleton .comment-box-skeleton {
+    width: 680px;
+    float: right;
+    position: relative;
+    border: 1px solid #d1d5da; }
+  .comments-list-skeleton .comment-box-skeleton::before, .comments-list-skeleton .comment-box-skeleton:after {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 12px 10px 0;
+    border-style: solid;
+    border-color: transparent #FCFCFC;
+    top: 8px;
+    left: -11px; }
+  .comments-list-skeleton .comment-box-skeleton::before {
+    border-right-color: #d1d5da;
+    left: -12px; }
+  .comments-list-skeleton .comment-head-skeleton {
+    background: #FCFCFC;
+    padding: 7px 12px;
+    overflow: hidden;
+    border-bottom: 1px solid #d1d5da; }
+    .comments-list-skeleton .comment-head-skeleton h6 {
+      height: 14px;
+      float: left;
+      margin-right: 10px;
+      width: 150px; }
+    .comments-list-skeleton .comment-head-skeleton span {
+      float: left;
+      height: 13px;
+      width: 80px;
+      position: relative;
+      top: 5px; }
+    .comments-list-skeleton .comment-head-skeleton i {
+      float: right;
+      margin-left: 14px;
+      position: relative; }
+  .comments-list-skeleton .comment-content-skeleton {
+    background: #FFF;
+    padding: 12px; }
+    .comments-list-skeleton .comment-content-skeleton .text-1 {
+      letter-spacing: 0;
+      word-wrap: break-word;
+      padding-left: 10px;
+      margin: 0 0 7px;
+      width: 200px;
+      height: 10px; }
+    .comments-list-skeleton .comment-content-skeleton .text-2 {
+      letter-spacing: 0;
+      word-wrap: break-word;
+      padding-left: 10px;
+      margin: 0 0 7px;
+      width: 100px;
+      height: 10px; }
+
+.Perfil-Container-skeleton {
+  padding: 0px;
+  margin: 40px 0; }
+  .Perfil-Container-skeleton .User-Edit-skeleton {
+    background-color: #fafafa;
+    height: 130px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 2px 0px rgba(0, 0, 0, 0.12); }
+  .Perfil-Container-skeleton .User-Edit-img-skeleton {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px; }
+    .Perfil-Container-skeleton .User-Edit-img-skeleton .user-img-skeleton {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%; }
+  .Perfil-Container-skeleton .Tittle-Element-skeleton {
+    border-bottom: 1px solid #efefef;
+    margin-left: auto;
+    margin-right: auto; }
+    .Perfil-Container-skeleton .Tittle-Element-skeleton h4 {
+      margin-top: 10px;
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 18px; }
+  .Perfil-Container-skeleton .User-Info-skeleton {
+    display: inherit;
+    padding: 0px;
+    background-color: #fafafa;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 2px 0px rgba(0, 0, 0, 0.12); }
+    .Perfil-Container-skeleton .User-Info-skeleton .User-Info-Datos-skeleton {
+      display: inline-block;
+      border-right: 1px solid #efefef;
+      padding: 0px; }
+    .Perfil-Container-skeleton .User-Info-skeleton .User-element-skeleton {
+      padding: 20px 10px 20px 10px;
+      display: -ms-flexbox;
+      display: flex; }
+      .Perfil-Container-skeleton .User-Info-skeleton .User-element-skeleton span {
+        margin-left: 30px;
+        float: left;
+        position: relative;
+        height: 16px;
+        width: 200px; }
+    .Perfil-Container-skeleton .User-Info-skeleton .Turno-element-skeleton {
+      padding: 20px 10px 20px 10px;
+      display: -ms-flexbox;
+      display: flex;
+      border-bottom: 1px solid #efefef; }
+      .Perfil-Container-skeleton .User-Info-skeleton .Turno-element-skeleton span {
+        margin-left: 15px;
+        float: left;
+        height: 16px;
+        font-size: 10px;
+        position: relative;
+        width: 350px; }

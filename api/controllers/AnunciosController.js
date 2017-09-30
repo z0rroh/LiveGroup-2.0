@@ -24,7 +24,6 @@ module.exports = {
 					Anuncio.watch(req);
 					sails.log( 'Usuario suscrito a anuncios con la id: ' + req.socket.id );
 			}
-			res.send(infoUser);
 	},
 	new: function(req,res){
 		res.view('anuncios/new');

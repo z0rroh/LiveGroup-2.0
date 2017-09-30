@@ -36,10 +36,12 @@ module.exports = {
 
                       // Get updates about users being created
                       User.watch(req);
+                      sails.log( 'Usuario suscrito a user con la id: ' + req.socket.id );
+                      /*
                       User.findOne({id: req.session.User.id}).populate('groups').populate('turnos')
                       .then(function(user){
                         res.ok(user);
-                      });
+                      });*/
 
       }
   },
