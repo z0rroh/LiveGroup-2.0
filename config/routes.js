@@ -43,6 +43,7 @@ module.exports.routes = {
   'GET /anuncios': 'AnunciosController.index',
   'GET /perfil': 'UserController.perfil',
   'GET /user': 'UserController.index',
+  'GET /administrar': 'UserController.administrar',
   //'delete /userDelete/:id?': 'UserController.destroy'
 
 

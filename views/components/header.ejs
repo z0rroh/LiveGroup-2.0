@@ -25,7 +25,7 @@
               </div>
             </div>
             </div>
-          <div class="Logout col-lg-1">
+          <div class="Logout">
             <a title="Cerrar Sesion" href="/session/destroy" class="material-icons profile">power_settings_new</a>
           </div>
           <% } %>
@@ -42,7 +42,8 @@
             <% if(session.User.admin) { %>
               <div id="Nav-Grupos" class="Nav-Item"><a href="/group/show">Funcionarios</a></div>
 
-              <div id="Nav-Admin" class="Nav-Item"><a href="/admin">Administrar</a></div>
+              <div id="Nav-Admin" class="Nav-Item"><a href="/admin">CrearTurnos</a></div>
+              <div id="Nav-Admin" class="Nav-Item"><a href="/administrar">Administrar</a></div>
               <div id="Nav-Button" class="Nav-Button col-lg-1">
               </div>
             <% } %>
