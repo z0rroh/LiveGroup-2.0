@@ -44,6 +44,7 @@ module.exports.routes = {
   'GET /perfil': 'UserController.perfil',
   'GET /user': 'UserController.index',
   'GET /administrar': 'UserController.administrar',
+  'GET /group2': 'GroupController.groupdatatable'
   //'delete /userDelete/:id?': 'UserController.destroy'
 
 

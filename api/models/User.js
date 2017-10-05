@@ -62,11 +62,6 @@ module.exports = {
 				via: 'users',
 
 			},
-			rooms: {
-				collection: 'room',
-				via: 'users',
-				dominant: true
-			},
 			online:{
 				type: 'boolean',
 				defaultsTo: false

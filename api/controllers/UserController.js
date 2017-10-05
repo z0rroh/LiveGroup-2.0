@@ -182,6 +182,7 @@ module.exports = {
   administrar: function(req,res, next){
     res.view('admin/panel')
   },
+
 	edit: function(req, res, next){
 		User.findOne(req.param('id'), function userFounded(err, user){
 			if(err) return next(err);

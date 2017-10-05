@@ -23,6 +23,20 @@ module.exports = {
 		});
 
 	},
+	getUsers: function(req,res, next){
+		User.usersFindByGroup(req.session.User.id_group, function(err,users){
+			if(err)
+				return next(err);
+			res.json({
+				users: users
+			});
+
+		});
+	},
+	groupdatatable: function(req,res, next){
+		res.view('group/groupdatatable')
+	},
+
 	create: function(req, res){
 		User.findOne(req.session.User.id, function (err, user) {
 			if(err){
