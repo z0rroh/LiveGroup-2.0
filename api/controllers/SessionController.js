@@ -16,7 +16,7 @@ module.exports = {
 		}
 	},
 	create: function(req, res, next){
-
+		console.log(req.param('email'), req.param('password'));
 		if(!req.param('email') || !req.param('password')) {
 			var NoEmailOrPassword =[{message: 'Debe ingresar Email y Contraseña'}]
 			req.session.flash={
